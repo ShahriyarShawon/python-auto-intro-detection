@@ -37,9 +37,9 @@ while True:
     cur = ssim_index
 
     scores.append(ssim_index)
-    i+=1
+    i += 1
 
-    diff = cur - prev 
+    diff = cur - prev
     if diff < -0.4:
         fps = 23.976023976023978
         timestamp = int(i / fps)
@@ -52,4 +52,3 @@ with open("out.csv", "w") as f:
         f.write(f"{i},{scores[i]}\n")
 cap.release()
 cv2.destroyAllWindows()
-
