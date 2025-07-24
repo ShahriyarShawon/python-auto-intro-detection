@@ -1,3 +1,5 @@
 *.mkv
 *.mp4
 .~lock*
+test.py
+out.csv
