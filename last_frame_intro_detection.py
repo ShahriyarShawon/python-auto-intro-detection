@@ -44,8 +44,8 @@ def find_intro(fname: str, path: str):
         scores.append(ssim_index)
         i += 1
 
-        diff = cur - prev
-        if diff < -0.4:
+        diff = prev - cur
+        if diff > 0.5:
             cv2.imwrite("grayscale_frame.png", gray_frame)
             fps = cap.get(cv2.CAP_PROP_FPS)
             timestamp = int(i / fps)
