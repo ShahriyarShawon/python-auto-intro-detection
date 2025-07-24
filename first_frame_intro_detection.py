@@ -49,10 +49,6 @@ def find_intro(fname: str, path: str):
             print(f"End Frame found: Frame {i-2}")
             break
 
-    with open("{fname.split(".")[0]}-out.csv", "w") as f:
-        for i in range(len(scores)):
-            f.write(f"{i},{scores[i]}\n")
-
     cv2.destroyAllWindows()
 
 
